@@ -1,0 +1,2 @@
+# android_device_readboy_msm8996
+本设备树由twrpdtgen生成
