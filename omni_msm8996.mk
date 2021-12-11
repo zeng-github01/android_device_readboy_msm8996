@@ -26,9 +26,4 @@ PRODUCT_MANUFACTURER := readboy
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=readboy/msm8996/msm8996:7.1.2/N2G47H/20200911:user/dev-keys \
-    ro.product.device=msm8996 \
-    ro.secure=0 \
-    ro.adb.secure=0 \
-    persist.service.adb.enable=1 \
-    persist.service.debuggable=1 \
-    persist.sys.usb.config=adb
+    ro.product.device=msm8996
