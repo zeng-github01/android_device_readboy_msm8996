@@ -39,8 +39,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Decrypt
-TW_INCLUDE_CRYPTO := true
-TARGET_RECOVERY_QCOM_RTC_FIX := true
+#TARGET_RECOVERY_QCOM_RTC_FIX := true
+TARGET_HW_DISK_ENCRYPTION := true
+TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff buildvariant=user
@@ -60,6 +61,7 @@ TARGET_KERNEL_CONFIG := msm8996_defconfig
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8996
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno530
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
@@ -70,6 +72,8 @@ PLATFORM_VERSION := 16.1.0
 #RECOVERY_SDCARD_ON_DATA := true
 
 # TWRP Configuration
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_NTFS_3G := true
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
